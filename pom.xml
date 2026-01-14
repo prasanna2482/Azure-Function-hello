@@ -26,12 +26,7 @@
         <azure.functions.java.library.version>3.0.0</azure.functions.java.library.version>
         <spring.cloud.function.dependencies>4.0.0</spring.cloud.function.dependencies>
 
-        <!-- customize those five properties. The functionAppName should be unique across Azure -->
-        <functionResourceGroup>my-spring-function-resource-group</functionResourceGroup>
-        <functionAppServicePlanName>my-spring-function-service-plan</functionAppServicePlanName>
-        <functionAppName>my-spring-function</functionAppName>
-        <functionAppRegion>westeurope</functionAppRegion>
-        <functionPricingTier>Y1</functionPricingTier>
+       
 
         <start-class>com.example.DemoApplication</start-class>
     </properties>
@@ -123,12 +118,6 @@
                 <groupId>com.microsoft.azure</groupId>
                 <artifactId>azure-functions-maven-plugin</artifactId>
                 <configuration>
-                    <resourceGroup>${functionResourceGroup}</resourceGroup>
-                    <appName>${functionAppName}</appName>
-                    <region>${functionAppRegion}</region>
-                    <appServicePlanName>${functionAppServicePlanName}</appServicePlanName>
-                    <pricingTier>${functionPricingTier}</pricingTier>
-
                     <hostJson>${project.basedir}/src/resources/host.json</hostJson>
                     <localSettingsJson>${project.basedir}/src/main/azure/local.settings.json</localSettingsJson>
 
