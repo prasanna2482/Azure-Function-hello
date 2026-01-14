@@ -147,6 +147,7 @@
                 <executions>
                     <execution>
                         <id>package-functions</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>package</goal>
                         </goals>
