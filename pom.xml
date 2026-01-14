@@ -171,36 +171,5 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
-  <plugins>
-    <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-assembly-plugin</artifactId>
-      <version>3.6.0</version>
-      <executions>
-        <execution>
-          <id>zip-target-folder</id>
-          <phase>package</phase>
-          <goals>
-            <goal>single</goal>
-          </goals>
-
-          <configuration>
-            <finalName>hello</finalName>
-            <appendAssemblyId>false</appendAssemblyId>
-            <formats>
-              <format>zip</format>
-            </formats>
-
-            <fileSets>
-              <fileSet>
-                <directory>${project.build.directory}/azure-functions/my-spring-function</directory>
-                <outputDirectory>/</outputDirectory>
-              </fileSet>
-            </fileSets>
-          </configuration>
-        </execution>
-      </executions>
-    </plugin>
-  </plugins>
-    </build>
+   </build>
 </project>
