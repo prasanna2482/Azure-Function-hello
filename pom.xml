@@ -129,7 +129,7 @@
                     <appServicePlanName>${functionAppServicePlanName}</appServicePlanName>
                     <pricingTier>${functionPricingTier}</pricingTier>
 
-                    <hostJson>${project.basedir}/src/main/azure/host.json</hostJson>
+                    <hostJson>${project.basedir}/src/resources/host.json</hostJson>
                     <localSettingsJson>${project.basedir}/src/main/azure/local.settings.json</localSettingsJson>
 
                     <runtime>
