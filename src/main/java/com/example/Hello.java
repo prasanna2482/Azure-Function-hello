@@ -9,8 +9,9 @@ import java.util.function.Function;
 
 @Component
 public class Hello implements Function<User, Greeting> {
-
-    public Mono<Greeting> apply(Mono<User> mono) {
-        return mono.map(user -> new Greeting("Hello, " + user.getName() + "!\n"));
+@Override
+    public Greeting apply(User user) {
+        return new Greeting("Hello, " + user.getName() + "!");
     }
+   
 }
